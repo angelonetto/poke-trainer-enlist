@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,800;1,300;1,400;1,800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <title>PokeTrainer PRJKT</title>
+</head>
+
+<body>
+    <header>
+        <img id="logo" src="./pokemon-logo-200px.png" alt="pokemon logo">
+    </header>
+    <!--------------------------------------------------------------------------------------->
+    <main>
+        <section>
+            <form action="" method="get" id="pokeTrainerForm"></form>
+            <fieldset name="trainerInfos" class="container">
+                <legend>
+                    <h2>Please, fill out the form in order to add your data on the system.</h2>
+                </legend>
+                <div class="fields">
+                    <label for="trainerInfos">
+                        <h3>Name:</h3>
+                    </label>
+                    <input type="text" placeholder="Insert your full name here">
+                </div>
+
+                <div class="fields">
+                    <label for="trainerInfos">
+                        <h3>Birthdate:</h3>
+                    </label>
+                    <input type="date" placeholder="Insert your full name here">
+                    <p>Insert a legal document here to prove that your parents consent with your journey if you're minor
+                    </p>
+                    <label for="trainerInfos" id="fileButton">Choose a file</label>
+                    <input type="file" hidden>
+                </div>
+
+                <div class="fields">
+                    <label for="trainerInfos">
+                        <h3>Phone:</h3>
+                    </label>
+                    <input type="text" required placeholder="Insert your phone number" autocomplete="tel">
+                </div>
+
+                <div class="fields">
+                    <label for="trainerInfos">
+                        <h3>E-mail:</h3>
+                    </label>
+                    <input type="email" required placeholder="Insert your e-mail" autocomplete="email">
+                </div>
+
+                <div class="fields">
+                    <label id="gender" name="gender" for="trainerInfos">
+                        <h3>Gender:</h3>
+                    </label>
+                    <div class="genderDiv">
+                        <input type="radio" name="gender" class="genderInputs"> Male
+                        <input type="radio" name="gender" class="genderInputs"> Female
+                        <input type="radio" name="gender" class="genderInputs"> Other
+                    </div>
+                </div>
+
+                <div class="fields">
+                    <label for="trainerInfos">
+                        <h3>Address:</h3>
+                    </label>
+                    <input type="text" required placeholder="Insert your address">
+                </div>
+
+                <div class="fields">
+                    <label for="trainerInfos">
+                        <h3>Region:</h3>
+                    </label>
+                    <input type="text" list="region" required placeholder="Choose a region"
+                        autocomplete="street-address">
+                    <datalist id="region">
+                        <option>Kanto</option>
+                        <option>Johto</option>
+                        <option>Hoenn</option>
+                        <option>Sinnoh</option>
+                        <option>Unova</option>
+                        <option>Kalos</option>
+                        <option>Alola</option>
+                        <option>Galar</option>
+                    </datalist>
+                </div>
+
+                <div class="fields">
+                    <label for="trainerInfos">
+                        <h3>Choose Your Starter Pokémon:</h3>
+                    </label>
+                    <input type="text" list="starterPokemon" required placeholder="Choose one">
+                    <datalist id="starterPokemon">
+                        <option>Bulbasaur</option>
+                        <option>Charmander</option>
+                        <option>Squirtle</option>
+                        <option>Chikorita</option>
+                        <option>Cyndaquil</option>
+                        <option>Totodile</option>
+                        <option>Treecko</option>
+                        <option>Torchic</option>
+                        <option>Mudkip</option>
+                        <option>Turtwig</option>
+                        <option>Chimchar</option>
+                        <option>Piplup</option>
+                        <option>Snivy</option>
+                        <option>Tepig</option>
+                        <option>Oshawott</option>
+                        <option>Chespin</option>
+                        <option>Fennekin</option>
+                        <option>Froakie</option>
+                        <option>Rowlet</option>
+                        <option>Litten</option>
+                        <option>Popplio</option>
+                        <option>Grookey</option>
+                        <option>Scorbunny</option>
+                        <option>Sobble</option>
+                    </datalist>
+                </div>
+
+                <!--   <div class="fields">
+                    <label for="trainerInfos">
+                        <h3>Choose Your Starting Pokémon:</h3>
+                    </label>
+                    <div class="selectStarter" style="width:200px;">
+                    <select name="startingPokemon" size="1">
+                        <optgroup label="Kanto"></optgroup>
+                            <option>Bulbasaur</option>
+                            <option>Charmander</option>
+                            <option>Squirtle</option>
+                        </optgroup>
+                        <optgroup label="Johto">
+                            <option>Chikorita</option>
+                            <option>Cyndaquil</option>
+                            <option>Totodile</option>
+                        </optgroup>
+                        <optgroup label="Hoenn">
+                            <option>Treecko</option>
+                            <option>Torchic</option>
+                            <option>Mudkip</option>
+                        </optgroup>
+                        <optgroup label="Sinnoh">
+                            <option>Turtwig</option>
+                            <option>Chimchar</option>
+                            <option>Piplup</option>
+                        </optgroup>
+                        <optgroup label="Unova">
+                            <option>Snivy</option>
+                            <option>Tepig</option>
+                            <option>Oshawott</option>
+                        </optgroup>
+                        <optgroup label="Kalos">
+                            <option>Chespin</option>
+                            <option>Fennekin</option>
+                            <option>Froakie</option>
+                        </optgroup>
+                        <optgroup label="Alola">
+                            <option>Rowlet</option>
+                            <option>Litten</option>
+                            <option>Popplio</option>
+                        </optgroup>
+                        <optgroup label="Galar">
+                            <option>Grookey</option>
+                            <option>Scorbunny</option>
+                            <option>Sobble</option>
+                        </optgroup>
+                    </div>
+                </div> -->
+            </form>
+            <button type="submit" form="pokeTrainerForm" value="Submit" class="button" style="vertical-align:middle"><span>Submit</span></button>
+            </fieldset>
+            
+        </section>
+
+        
+    </main>
+    <!--------------------------------------------------------------------------------------->
+    <footer>
+
+    </footer>
+</body>
+
+</html>

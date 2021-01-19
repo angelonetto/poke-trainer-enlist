@@ -1,0 +1,155 @@
+/* ============ GLOBALS ============*/
+
+:root {
+    /*Selector que referencia a raiz do HTML*/    
+    --yellow-logo: #fccf00;
+    --blue-logo: #2468b1;
+    --dark-blue: #003a70;
+    --light-gray: #999999;
+    --gray: #666666;
+    --dark-gray: #333333;
+}
+    
+* {   /*Seletor universal*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /*Muda a estilização da box para contar a partir da borda, ou seja, independente o padding da caixa, ela sempre vai ser o valor do tamanho total estipulado*/
+    font-family: 'Open Sans', sans-serif;
+}
+
+/*============ TITLES ============*/
+
+h2 {
+    font-weight: 450;
+    margin-top: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--dark-gray);
+}
+
+h3 {
+    font-weight: 400;
+    font-size: 1rem;
+    color: var(--dark-gray)
+}
+
+/*============ HEADER ============*/
+
+#logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+}
+
+/*============ BODY ============*/
+
+body {
+    background: #f0f2f5;
+}
+
+section {
+    margin-top: -50px;
+}
+
+legend {
+    text-align: center;
+}
+
+fieldset {
+    border: none;
+}
+
+.container {
+    width: min(90vw, 800px);
+    /*VW= View Port Width / aqui há uma função que diz: "Se o viewport tiver 90vw e esse for o menor valor, fica com esse valor, senão for o menor valorr, usa 800px*/
+    margin: auto;
+}
+
+.fields {
+    border-spacing: 0 1rem;
+    padding: 0.2rem;
+    color: var(--light-gray);
+}
+
+/*============ INPUTS ============*/
+
+input {
+    width: 100%;
+    padding: 16px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #ffffff
+}
+
+input[type=file] {
+    background-color: #ffffff;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+#fileButton {
+    display: inline-block;
+    background-color: var(--blue-logo);
+    color: white;
+    padding: 0.5rem;
+    font-family: sans-serif;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    margin-top: 0;
+}
+
+.genderInputs {
+    width: auto;
+    
+}
+
+.genderDiv {
+    background: #ffffff;
+    padding: 0.5rem;
+    border-radius: 4px;
+}
+
+/*============ SUBMIT BUTTON ============*/
+.button {
+    display: inline-block;
+    border-radius: 4px;
+    background-color: var(--blue-logo);
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 15px;
+    padding: 20px;
+    width: 100px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+}
+  
+.button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.button:hover span {
+    padding-right: 25px;
+}
+
+.button:hover span:after {
+    opacity: 1;
+    right: 0;
+}
